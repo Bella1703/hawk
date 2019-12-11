@@ -1,7 +1,326 @@
 @import "_mixins.less";
 @import "_vars.less";
-#main {
-    text-align: center;
-    margin-top: 10%;
+@import "reset.css";
+
+//СБРОС
+a:hover {
+    text-decoration: none;
 }
 
+
+//ОБЩИЕ
+.body {
+    font-size: 15px;
+}
+
+.display-none {
+    display: none;
+}
+
+.content {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1240px;
+    min-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    .flex-col();
+}
+
+.title-1 {
+    .montserrat(700, 10rem, #ffffff, 0, uppercase);
+}
+
+.title-2 {
+    .pattaya(400, 4.8rem, #ffffff, 0.5em);
+}
+
+.title-3 {
+    .montserrat(700, 2rem, #333333, 1em, uppercase);
+}
+
+.title-4 {
+    .pattaya();
+}
+
+.separator {
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-bottom: 45px;
+}
+
+.main-text-page {
+    .roboto();
+    text-align: center;
+}
+
+//ГЛАВНАЯ
+.main-page {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 920px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../../images/main-page.png") no-repeat center;
+
+    & .header {
+        margin-bottom: 180px;
+    }
+}
+
+.header {
+    padding-top: 28px;
+    .flex-row(space-between, flex-start);
+    width: 100%;
+
+    & .nav-list {
+        padding-top: 12px;
+    }
+}
+
+.logo {
+    .montserrat(700, 2rem, #ffffff, 0)
+}
+
+.header__right {
+    .flex-row(flex-end, center)
+}
+
+.nav-list {
+    .flex-row();
+
+    & a {
+        .montserrat(400, 0.93rem, #ffffff, 0.86em, uppercase);
+        display: inline-block;
+    }
+
+    & a:hover {
+        color: #fce38a;
+    }
+
+    & li:not(:last-child) {
+        margin-right: 55px;
+    }
+
+    & li {
+        height: 30px;
+    }
+}
+
+.nav-list-item-underline {
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+}
+
+.nav-list li div {
+    display: none;
+}
+
+.nav-list a:hover + div {
+    display: block;
+}
+
+
+//О НАС
+.about-us-page {
+    padding-top: 90px;
+}
+
+.about-us-page-gallery {
+    width: 100%;
+    padding-top: 7%;
+    margin-bottom: 8%;
+    .flex-row(space-between, flex-start);
+    & img {
+        width: 100%;
+    }
+    & .about-us-page-gallery__item:hover .about-us-page-gallery__img{
+        position: relative;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+    }
+    & .about-us-page-gallery__item:hover .about-us-page-gallery__img-hover{
+        display: block;
+    }
+}
+.about-us-page-gallery__item {
+    width: calc((100% - 60px) / 3);
+    background-color: #95e1d3;
+    position: relative;
+}
+.about-us-page-gallery__img-hover {
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.9;
+}
+.about-us-page-gallery__title {
+    .montserrat(700, 1.2rem, #ffffff, 0, uppercase);
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: calc(50% - 0.6rem - 10px);
+    left: calc(50% - 100px - 10px);
+    text-align: center;
+}
+.about-us-page-gallery__item:hover .about-us-page-gallery__title {
+    display: block;
+}
+
+
+
+//ПОЛОСА С ЦИФРАМИ
+.numbers-band {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 920px;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #95e1d3;
+    & .content,
+    & .content ul {
+        height: 100%;
+    }
+    & ul {
+        width: 100%;
+        .flex-row(space-between, baseline);
+    }
+}
+.numbers-band__number {
+    .montserrat(700, 4.8rem, #ffffff, 0.4em, uppercase);
+    text-align: center;
+}
+.numbers-band__title {
+    .montserrat(400, 0.93rem, #ffffff, 0, uppercase);
+    text-align: center;
+    line-height: 1.5em;
+}
+.numbers-band__item {
+    width: calc(100% / 5);
+    height: 100%;
+    border-left: solid 1px #b5eae0;
+    .flex-col();
+}
+.numbers-band__item:last-child {
+    border-right: solid 1px #b5eae0;
+}
+
+
+//УСЛУГИ
+.services-page {
+    width: 100%;
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+.services-list {
+    .flex-row(space-between, flex-start);
+    flex-wrap: wrap;
+}
+.services-list-item {
+    .flex-row(flex-start, flex-start);
+    width: calc((100% - 120px)/3);
+    @media (max-width: 1200px) {
+        width: calc((100% - 120px)/2);
+    }
+    & img {
+        margin-right: 28px;
+    }
+}
+.services-list-item__title {
+    .montserrat(700, 0.93rem, #333333, 1em, uppercase);
+}
+.services-list-item__text {
+    .roboto(400, 1rem, #999999, 0, none);
+}
+.services-list__separator-big,
+.services-list__separator-small {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.services-list__separator-big {
+    display: block;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+.services-list__separator-small {
+    display: none;
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+
+
+//АДАПТИВНЫЙ ДИЗАЙН
+.adaptive-design-page {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 920px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../../images/adaptive-design-background.png") no-repeat center;
+    padding-top: 90px;
+    position: relative;
+    & img {
+        position: absolute;
+        top: 268px;
+    }
+}
+
+
+//ЛЮБОЙ ФОРМАТ
+.format-page {
+    padding-top: 90px;
+    & .main-text-page {
+        margin-bottom: 92px;
+    }
+}
+.format-page-gallery {
+    .flex-row(space-between, start);
+    width: 100%;
+    & .format-page-gallery__img,
+    & .format-page-gallery-list {
+        width: calc((100% - 30px)/2);
+    }
+    margin-bottom: 120px;
+}
+.format-page-gallery-list__title-block {
+    .flex-row(space-between, center);
+    padding-left: 15px;
+    padding-right: 20px;
+    height: 60px;
+    border: 1px solid #e5e5e5;
+}
+.format-page-gallery-list__title-block-left {
+    .flex-row(flex-start, center);
+}
+.format-page-gallery-list__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+.format-page-gallery-list__arrow-icon {
+    width: 22px;
+    height: 12px;
+}
+.format-page-gallery-list__title {
+    .montserrat(700, 0.93rem, #333333, 0, uppercase);
+}
+.format-page-gallery-list__content-block {
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    height: 181px;
+    .roboto(300, 1rem, #999999, 0, none);
+    font-style: italic;
+    overflow-y: auto;
+}

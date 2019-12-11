@@ -1,16 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Webpack Boilerplate</title>
-	<!-- <link rel="stylesheet" type="text/css" href="/assets/bundle.css"> -->
+    <meta charset="UTF-8">
+    <title>Webpack Boilerplate</title>
+    <link rel="stylesheet" type="text/css" href="/assets/bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
-<body>
-	<section id="main">
-		<h1>Webpack Boilerplate</h1>
-		<img src="/images/logo.png" width="200" />
-		<h6>Copyright 2018 © Rufat .</h6>
-	</section>
-	<script type="text/javascript" src="/assets/bundle.js"></script>
+<body class="body">
+<div class="main-page">
+    <div class="content">
+        <header class="header">
+            <div class="logo">Ястреб</div>
+            <div class="header__right">
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-list-item" href="#">О нас</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#">Примеры работ</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#">Блог</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <h2 class="title-2">Веб-студия</h2>
+        <h1 class="title-1">Ястреб</h1>
+    </div>
+</div>
+<div class="about-us-page">
+    <div class="content">
+        <h4 class="title-4">Чем мы занимаемся...</h4>
+        <h3 class="title-3">О нас</h3>
+        <div class="separator"></div>
+        <div class="main-text-page">
+            Веб-студия "Ястреб" предлагает создание с нуля сайтов высокого качества, доступных для обладателей
+            небольших бюджетов. Мы знаем как сделать качественный сайт, с чистым кодом, хорошим отношением поисковых
+            систем, надежной административной системой, красивым дизайном и удобством для посетителей сайта. И все это
+            мы делаем по весьма демократичным ценам.
+        </div>
+        <div class="about-us-page-gallery">
+            <div class="about-us-page-gallery__background-hover"></div>
+            <div class="about-us-page-gallery__item">
+                <img class="about-us-page-gallery__img" src="images/about-us-page-img-1.png">
+                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
+                <div class="about-us-page-gallery__title">Качество</div>
+            </div>
+            <div class="about-us-page-gallery__item">
+                <img src="images/about-us-page-img-2.png">
+                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
+                <div class="about-us-page-gallery__title">Надежность</div>
+            </div>
+            <div class="about-us-page-gallery__item">
+                <img src="images/about-us-page-img-3.png">
+                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
+                <div class="about-us-page-gallery__title">Красота</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="numbers-band">
+    <div class="content">
+        <ul>
+            <li class="numbers-band__item">
+                <div class="numbers-band__number">42</div>
+                <div class="numbers-band__title">Проекта веб-дизайна</div>
+            </li>
+            <li class="numbers-band__item">
+                <div class="numbers-band__number">123</div>
+                <div class="numbers-band__title">Счастливых клиента</div>
+            </li>
+            <li class="numbers-band__item">
+                <div class="numbers-band__number">15</div>
+                <div class="numbers-band__title">Премий</div>
+            </li>
+            <li class="numbers-band__item">
+                <div class="numbers-band__number">99</div>
+                <div class="numbers-band__title">Чашек кофе</div>
+            </li>
+            <li class="numbers-band__item">
+                <div class="numbers-band__number">24</div>
+                <div class="numbers-band__title">Сотрудника</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="services-page">
+    <div class="content">
+        <h4 class="title-4">Мы работаем с...</h4>
+        <h3 class="title-3">Услуги</h3>
+        <div class="separator"></div>
+        <ul class="services-list">
+            <li class="services-list-item">
+                <img src="images/services-list-icon-1.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Разработка</div>
+                    <div class="services-list-item__text">
+                        Наша команда подберет особый подход для создания сайта с уникальными функциями и нетипичными
+                        решениями.
+                    </div>
+                </div>
+            </li>
+
+            <li class="services-list-item">
+                <img src="images/services-list-icon-2.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Контент</div>
+                    <div class="services-list-item__text">
+                        Контент - оригинальные тексты для рубрик сайта, визуальный ряд и прочее является основой в
+                        дальнейшем в продвижении сайта.
+                    </div>
+                </div>
+            </li>
+
+            <div class="services-list__separator-small"></div>
+
+            <li class="services-list-item">
+                <img src="images/services-list-icon-3.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Дизайн</div>
+                    <div class="services-list-item__text">
+                        Грамотный дизайн сделает Ваш бренд узнаваемым, привлекательным и повысит престиж Вашей компании
+                        на современном рынке.
+                    </div>
+                </div>
+            </li>
+
+            <div class="services-list__separator-big"></div>
+
+            <li class="services-list-item">
+                <img src="images/services-list-icon-4.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Оптимизация</div>
+                    <div class="services-list-item__text">
+                        Правильно оптимизированный программный код - основа успешного продвижения, что многократно
+                        уменьшит дальнейшие затраты.
+                    </div>
+                </div>
+            </li>
+
+            <div class="services-list__separator-small"></div>
+
+            <li class="services-list-item">
+                <img src="images/services-list-icon-5.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Продвижение</div>
+                    <div class="services-list-item__text">
+                        Контекстная реклама в Яндекс и Google, SEO продвижение, SMM и др. источники привлечения
+                        аудитории на Ваш сайт.
+                    </div>
+                </div>
+            </li>
+
+            <li class="services-list-item">
+                <img src="images/services-list-icon-6.png">
+                <div class="services-list-item__content">
+                    <div class="services-list-item__title">Поддержка</div>
+                    <div class="services-list-item__text">
+                        Непрерывная и комплексная поддержка сайта - это внедрение различных сервисов и
+                        функций, оперативное исправление ошибок.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="adaptive-design-page">
+    <div class="content">
+        <h4 class="title-4">Для всех устройств...</h4>
+        <h3 class="title-3">Адаптивный дизайн</h3>
+        <div class="separator"></div>
+        <img src="images/adaptive-design-page-img.png">
+    </div>
+</div>
+<div class="format-page">
+    <div class="content">
+        <h4 class="title-4">Услуги...</h4>
+        <h3 class="title-3">Любой формат</h3>
+        <div class="separator"></div>
+        <div class="main-text-page">
+            Мы создаем сайты и интернет-магазины любой сложности и под любые цели. Нужен простой сайт-визитка или
+            полноценный интернет-магазин, корпоративный сайт или полноценный портал с личным кабинетом для партнера и
+            клиента? Мы предложим решение, которое будет соответствовать Вашим целям и бюджету.
+        </div>
+        <div class="format-page-gallery">
+            <img class="format-page-gallery__img" src="images/format-page-gallery-img.png">
+            <ul class="format-page-gallery-list">
+                <li class="format-page-gallery-list__item">
+                    <div class="format-page-gallery-list__title-block">
+                        <div class="format-page-gallery-list__title-block-left">
+                            <img class="format-page-gallery-list__icon"
+                                 src="images/format-page-gallery-list-icon-1.svg">
+                            <div class="format-page-gallery-list__title">Сайт-визитка</div>
+                        </div>
+                        <img class="format-page-gallery-list__arrow-icon" src="images/arrow-up-icon.svg">
+                    </div>
+                    <div class="format-page-gallery-list__content-block">
+                        Сайт-визитка является одним из наиболее простых и доступных вариантов коммерческого сайта. Такой
+                        сайт станет оптимальным выбором для компаний, которые хотят укрепить свои позиции на просторах
+                        сети Интернет, однако не планируют переводить свой бизнес в виртуальную реальность.
+                        Непосредственно создание сайта-визитки не предполагает разработки большого количества страниц,
+                        поскольку такой ресурс обычно состоит максимум из 5 – 7 разделов. При этом сайты такого рода
+                        наиболее эффективны для привлечения потенциальных клиентов из сети, а значит, следует уделить
+                        особое внимание созданию уникального, яркого дизайна, функциональности будущего Интернет-портала
+                        и его качественной раскрутке в поисковых системах.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/bundle.js"></script>
 </body>
 </html>
