@@ -64,12 +64,12 @@
                 <div class="about-us-page-gallery__title">Качество</div>
             </div>
             <div class="about-us-page-gallery__item">
-                <img src="images/about-us-page-img-2.png">
+                <img class="about-us-page-gallery__img" src="images/about-us-page-img-2.png">
                 <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
                 <div class="about-us-page-gallery__title">Надежность</div>
             </div>
             <div class="about-us-page-gallery__item">
-                <img src="images/about-us-page-img-3.png">
+                <img class="about-us-page-gallery__img" src="images/about-us-page-img-3.png">
                 <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
                 <div class="about-us-page-gallery__title">Красота</div>
             </div>
@@ -109,7 +109,7 @@
         <div class="separator"></div>
         <ul class="services-list">
             <li class="services-list-item">
-                <img src="images/services-list-icon-1.png">
+                <img src="images/services-list-icon-1.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Разработка</div>
                     <div class="services-list-item__text">
@@ -120,7 +120,7 @@
             </li>
 
             <li class="services-list-item">
-                <img src="images/services-list-icon-2.png">
+                <img src="images/services-list-icon-2.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Контент</div>
                     <div class="services-list-item__text">
@@ -133,7 +133,7 @@
             <div class="services-list__separator-small"></div>
 
             <li class="services-list-item">
-                <img src="images/services-list-icon-3.png">
+                <img src="images/services-list-icon-3.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Дизайн</div>
                     <div class="services-list-item__text">
@@ -146,7 +146,7 @@
             <div class="services-list__separator-big"></div>
 
             <li class="services-list-item">
-                <img src="images/services-list-icon-4.png">
+                <img src="images/services-list-icon-4.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Оптимизация</div>
                     <div class="services-list-item__text">
@@ -159,7 +159,7 @@
             <div class="services-list__separator-small"></div>
 
             <li class="services-list-item">
-                <img src="images/services-list-icon-5.png">
+                <img src="images/services-list-icon-5.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Продвижение</div>
                     <div class="services-list-item__text">
@@ -170,7 +170,7 @@
             </li>
 
             <li class="services-list-item">
-                <img src="images/services-list-icon-6.png">
+                <img src="images/services-list-icon-6.svg">
                 <div class="services-list-item__content">
                     <div class="services-list-item__title">Поддержка</div>
                     <div class="services-list-item__text">
@@ -202,29 +202,137 @@
         </div>
         <div class="format-page-gallery">
             <img class="format-page-gallery__img" src="images/format-page-gallery-img.png">
-            <ul class="format-page-gallery-list">
-                <li class="format-page-gallery-list__item">
-                    <div class="format-page-gallery-list__title-block">
-                        <div class="format-page-gallery-list__title-block-left">
-                            <img class="format-page-gallery-list__icon"
-                                 src="images/format-page-gallery-list-icon-1.svg">
-                            <div class="format-page-gallery-list__title">Сайт-визитка</div>
-                        </div>
-                        <img class="format-page-gallery-list__arrow-icon" src="images/arrow-up-icon.svg">
-                    </div>
-                    <div class="format-page-gallery-list__content-block">
-                        Сайт-визитка является одним из наиболее простых и доступных вариантов коммерческого сайта. Такой
-                        сайт станет оптимальным выбором для компаний, которые хотят укрепить свои позиции на просторах
-                        сети Интернет, однако не планируют переводить свой бизнес в виртуальную реальность.
-                        Непосредственно создание сайта-визитки не предполагает разработки большого количества страниц,
-                        поскольку такой ресурс обычно состоит максимум из 5 – 7 разделов. При этом сайты такого рода
-                        наиболее эффективны для привлечения потенциальных клиентов из сети, а значит, следует уделить
-                        особое внимание созданию уникального, яркого дизайна, функциональности будущего Интернет-портала
-                        и его качественной раскрутке в поисковых системах.
-                    </div>
-                </li>
-            </ul>
+            <div class="format-page-gallery-list-wrap-1">
+                <div class="format-page-gallery-list-wrap-2">
+                    <ul class="format-page-gallery-list">
+                        <li class="format-page-gallery-list__item">
+                            <div class="format-page-gallery-list__title-block">
+                                <div class="format-page-gallery-list__title-block-left">
+                                    <img class="format-page-gallery-list__icon"
+                                         src="images/format-page-gallery-list-icon-1.svg">
+                                    <div class="format-page-gallery-list__title">Сайт-визитка</div>
+                                </div>
+                            </div>
+                            <div class="format-page-gallery-list__content-block display-none">
+                                    Сайт-визитка является одним из наиболее простых и доступных вариантов коммерческого
+                                    сайта. Такой
+                                    сайт станет оптимальным выбором для компаний, которые хотят укрепить свои позиции на
+                                    просторах
+                                    сети Интернет, однако не планируют переводить свой бизнес в виртуальную реальность.
+                                    Непосредственно создание сайта-визитки не предполагает разработки большого
+                                    количества
+                                    страниц,
+                                    поскольку такой ресурс обычно состоит максимум из 5 – 7 разделов. При этом сайты
+                                    такого
+                                    рода
+                                    наиболее эффективны для привлечения потенциальных клиентов из сети, а значит,
+                                    следует
+                                    уделить
+                                    особое внимание созданию уникального, яркого дизайна, функциональности будущего
+                                    Интернет-портала
+                                    и его качественной раскрутке в поисковых системах.
+                            </div>
+                        </li>
+
+                        <li class="format-page-gallery-list__item">
+                            <div class="format-page-gallery-list__title-block">
+                                <div class="format-page-gallery-list__title-block-left">
+                                    <img class="format-page-gallery-list__icon"
+                                         src="images/format-page-gallery-list-icon-2.svg">
+                                    <div class="format-page-gallery-list__title">Корпоративный сайт</div>
+                                </div>
+                            </div>
+                            <div class="format-page-gallery-list__content-block display-none">
+                                Корпоративный сайт представляет собой ресурс, используемый для предоставления клиентам
+                                максимально полной, достоверной и актуальной информации о компании, для которой он
+                                создан.
+                                Помимо большого числа страниц, описывающих историю компании, ее услуги и коммерческие
+                                достижения, корпоративные сайты нередко предоставляют клиентам дополнительные сервисы,
+                                например,
+                                заказ услуг через Интернет, поддержание обратной связи и многое другое.
+                                Существует несколько основных причин, почему компании решают обзавестись собственным
+                                корпоративным сайтом. В первую очередь это стремление повысить престиж своей
+                                организации,
+                                привлечь посетителей и заявить о себе с помощью самого популярного инструмента – сети
+                                Интернет.
+                                Корпоративные сайты также призваны помочь компаниям в поиске потенциальных партнеров и
+                                новых
+                                сотрудников.
+                            </div>
+                        </li>
+
+                        <li class="format-page-gallery-list__item">
+                            <div class="format-page-gallery-list__title-block">
+                                <div class="format-page-gallery-list__title-block-left">
+                                    <img class="format-page-gallery-list__icon"
+                                         src="images/format-page-gallery-list-icon-3.svg">
+                                    <div class="format-page-gallery-list__title">Интернет-магазин</div>
+                                </div>
+                            </div>
+                            <div class="format-page-gallery-list__content-block display-none">
+                                Интернет-магазин – коммерческий сайт, предназначенный для тех, кто собирается вести
+                                бизнес с
+                                помощью виртуальной сети. Однако для того чтобы сайт приносил реальный доход, он должен
+                                быть
+                                одновременно стильным, привлекательным, удобным и функциональным.
+                                Наши сотрудники всегда готовы создать сайт интернет-магазина, который действительно
+                                сделает ваш
+                                бизнес прибыльным. Независимо от бюджета клиентов мы обеспечиваем каждому индивидуальный
+                                подход,
+                                подбирая дизайн и наполнение сайта исходя из специфики их деятельности.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+<div class="quote-band">
+    <div class="content">
+        <div class="quote-list-arrow quote-list-arrow-left"></div>
+        <div class="quote-list-arrow quote-list-arrow-right"></div>
+        <ul class="quote-list">
+            <li class="quote-list-item">
+                <img src="images/quote-band-img.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Мир, скорее, спасет графический дизайн, а не рок-н-ролл»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Дэвид Карсон</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="quote-list-item">
+                <img src="images/quote-band-img.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Цифровой дизайн похож на живопись, только краски никогда не сохнут»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Невилл Броуди</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="quote-list-item">
+                <img src="images/quote-band-img.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Сократ говорил «Познай себя». А я говорю «Познай своих пользователей». И знаете что? Они не
+                        думают, так же как и Вы»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Джошуа Брюэр</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 
