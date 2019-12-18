@@ -8,13 +8,15 @@ let formatPageGalleryListContentBlocks = document.body.querySelectorAll('.format
 
 formatPageGalleryList.addEventListener('click', showContentFormatPage);
 function showContentFormatPage(event) {
-    if (event.target.classList.contains('format-page-gallery-list__title-block')) {
-        if (event.target.nextElementSibling.classList.contains('display-none')) {
+    let target = event.target && event.target.closest('.format-page-gallery-list__title-block');
+
+    if (target.classList.contains('format-page-gallery-list__title-block')) {
+        if (target.nextElementSibling.classList.contains('display-none-important')) {
             for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
-                formatPageGalleryListContentBlock.classList.add('display-none');
+                formatPageGalleryListContentBlock.classList.add('display-none-important');
             }
         }
-        event.target.nextElementSibling.classList.toggle('display-none');
+        target.nextElementSibling.classList.toggle('display-none-important');
 
 
         for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
@@ -22,57 +24,38 @@ function showContentFormatPage(event) {
         }
 
 
-        if (!event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.style.height = '100%';
-        } else if (event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.removeAttribute("style");
+        if (!target.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.style.height = '100%';
+        } else if (target.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.removeAttribute("style");
         }
     }
-    else if (event.target.parentElement.classList.contains("format-page-gallery-list__title-block")) {
-        if (event.target.parentElement.nextElementSibling.classList.contains('display-none')) {
-            for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
-                formatPageGalleryListContentBlock.classList.add('display-none');
-            }
-        }
-        event.target.parentElement.nextElementSibling.classList.toggle('display-none');
+}
 
-        if (!event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.parentElement.style.height = '100%';
+//изменение стрелок в аккардеоне
+let formatPageGalleryListArrowIcon = document.body.querySelector('.format-page-gallery-list__arrow-icon');
+formatPageGalleryList.addEventListener('click', changeArrowFormatPageGallery);
+function changeArrowFormatPageGallery(event) {
+    for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
+        if (formatPageGalleryListContentBlock.classList.contains('display-none-important')) {
+            formatPageGalleryListContentBlock.previousElementSibling.lastElementChild.classList.add('format-page-gallery-list__arrow-icon-down');
+            formatPageGalleryListContentBlock.previousElementSibling.lastElementChild.classList.remove('format-page-gallery-list__arrow-icon-up');
         }
-        else if (event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.parentElement.style.height = '';
-        }
-    }
-    else if (event.target.parentElement.parentElement.classList.contains("format-page-gallery-list__title-block")) {
-        if (event.target.parentElement.parentElement.nextElementSibling.classList.contains('display-none')) {
-            for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
-                formatPageGalleryListContentBlock.classList.add('display-none');
-            }
-        }
-        event.target.parentElement.parentElement.nextElementSibling.classList.toggle('display-none');
-        if (!event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.parentElement.parentElement.style.height = '100%';
-        }
-        else if (event.target.nextElementSibling.classList.contains('display-none')) {
-            event.target.parentElement.parentElement.parentElement.style.height = '';
+        else if (!formatPageGalleryListContentBlock.classList.contains('display-none-important')) {
+            formatPageGalleryListContentBlock.previousElementSibling.lastElementChild.classList.add('format-page-gallery-list__arrow-icon-up');
+            formatPageGalleryListContentBlock.previousElementSibling.lastElementChild.classList.remove('format-page-gallery-list__arrow-icon-down');
         }
     }
 }
 
 
-
-
-
-
-
-
-
-
-
 //СКРОЛЛБАР НА СТРАНИЦЕ "ЛЮБОЙ ФОРМАТ"
-Scrollbar.init(document.querySelector('.format-page-gallery-list__content-block'), {
-    alwaysShowTracks: true,
-});
+let scrollElems = document.body.querySelectorAll('.format-page-gallery-list__content-block-inner-1');
+for (let scrollElem of scrollElems) {
+    Scrollbar.init(scrollElem, {
+        alwaysShowTracks: true,
+    });
+}
 
 
 //СЛАЙДЕР НА ЛЕНТЕ С ЦИТАТАМИ
@@ -84,6 +67,6 @@ $('.quote-list').slick({
     prevArrow: '.quote-list-arrow-left',
     nextArrow: '.quote-list-arrow-right',
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 10000,
+    autoplay: true,
+    autoplaySpeed: 7000,
 });

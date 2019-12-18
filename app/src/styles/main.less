@@ -9,15 +9,15 @@ a:hover {
     text-decoration: none;
 }
 
-
 //ОБЩИЕ
 .body {
     font-size: 15px;
 }
 
 .display-none {
-    display: none !important;
+    display: none;
 }
+
 
 .content {
     padding: 0 20px;
@@ -55,6 +55,7 @@ a:hover {
 .main-text-page {
     .roboto();
     text-align: center;
+    max-width: 954px;
 }
 
 //ГЛАВНАЯ
@@ -236,6 +237,7 @@ a:hover {
 .services-list {
     .flex-row(space-between, flex-start);
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .services-list-item {
@@ -297,6 +299,7 @@ a:hover {
     & img {
         position: absolute;
         top: 268px;
+        left: calc(50% - 318px);
     }
 }
 
@@ -338,7 +341,6 @@ a:hover {
     height:100%;
 }
 .format-page-gallery-list__item {
-    //height: 100%; //СДЕЛАТЬ НА JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
     max-height: calc(100% - 136px);
 }
 .format-page-gallery-list__title-block {
@@ -347,6 +349,7 @@ a:hover {
     padding-right: 20px;
     height: 60px;
     border: 1px solid #e5e5e5;
+    cursor: pointer;
 }
 
 .format-page-gallery-list__title-block-left {
@@ -384,15 +387,27 @@ a:hover {
     .roboto(300, 1rem, #999999, 0, none);
     font-style: italic;
     height: calc(100% - 60px);
-    padding: 20px;
-    overflow-y: auto;
+    padding: 20px 0 0 20px;
+    display: block;
 }
+.display-none-important {
+    display: none !important;
+}
+.format-page-gallery-list__content-block-inner-1 {
+    height: 90%;
+    margin: auto;
+}
+.format-page-gallery-list__content-block-inner-2 {
+    height: 100%;
+    margin-right: 50px;
+}
+
 
 //СКРОЛЛБАР НА СТРАНИЦЕ "ЛЮБОЙ ФОРМАТ"
 .scrollbar-track {
     background: #f5f5f5 !important;
     width: 5px !important;
-    margin-right: 15px !important;
+    margin-right: 25px !important;
     margin-left: 15px !important;
     border-radius: 3px !important;
 }
@@ -402,7 +417,9 @@ a:hover {
     width: 5px !important;
     border-radius: 3px !important;
 }
-
+.scrollbar-thumb-y {
+    cursor: pointer;
+}
 .scrollbar-thumb-x {
     display: none;
 }
@@ -410,7 +427,7 @@ a:hover {
 //ПОЛОСА С ЦИТАТАМИ
 .quote-band {
     width: 100%;
-    min-width: 900px;
+    min-width: 920px;
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -427,13 +444,21 @@ a:hover {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    @media (max-width: 1110px) {
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
 }
-
 .quote-list-item {
     & img {
-        margin-right: 61px;
+        margin-right: 60px;
         display: inline-block;
         float: left;
+        margin-left: 1px;
+        @media (max-width: 1110px) {
+            margin-right: 24px;
+        }
     }
 
     & .separator {
@@ -456,7 +481,7 @@ a:hover {
     font-style: italic;
 }
 
-//СЛАЙДЕР
+//СЛАЙДЕР НА ПОЛОСЕ С ЦИТАТАМИ
 .quote-list-arrow {
     width: 12px;
     height: 22px;
@@ -471,4 +496,170 @@ a:hover {
 .quote-list-arrow-right {
     background: url("../../images/arrow-icon-right.svg") center no-repeat;
     right: 0;
+}
+
+
+//ВСТРЕЧАЙТЕ НАШУ КОМАНДУ
+.team-page {
+    padding-top: 90px;
+}
+.team-page-gallery {
+    width: 100%;
+    padding-top: 7%;
+    margin-bottom: 8%;
+    .flex-row(space-between, flex-start);
+
+    & img {
+        width: 100%;
+    }
+
+    & .team-page-gallery__item:hover .team-page-gallery__img {
+        position: relative;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+    }
+
+    & .team-page-gallery__item:hover .team-page-gallery__img-hover {
+        display: block;
+    }
+    & .team-page-gallery__item:hover .team-page-gallery__link-block {
+        .flex-row();
+    }
+}
+
+.team-page-gallery__item-wrap {
+    width: calc((100% - 60px) / 3);
+}
+.team-page-gallery__item {
+    width: 100%;
+    background-color: #95e1d3;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.team-page-gallery__img-hover {
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.9;
+}
+
+.team-page-gallery__link-block {
+    display: none;
+    position: absolute;
+    top: calc(50%  - 38px);
+    left: calc(50% - 122px);
+}
+
+.team-page-gallery__link-block a {
+    width: 56px;
+    height: 56px;
+    background-color: #fce38a;
+    border: 1px solid rgba(243, 129, 129, 0.51);
+    &:not(:last-child) {
+        border-right: none;
+    }
+    &:hover {
+        background-color: #f38181;
+    }
+}
+.team-page-gallery__link {
+    width: 56px;
+    height: 56px;
+    z-index: 2;
+}
+.team-page-gallery__link-facebook {
+    background: url("../../images/icon-facebook.svg") no-repeat center;
+    &:hover {
+        background-image: url("../../images/icon-facebook-hover.svg");
+    }
+}
+.team-page-gallery__link-twitter {
+    background: url("../../images/icon-twitter.svg") no-repeat center;
+    &:hover {
+        background-image: url("../../images/icon-twitter-hover.svg");
+    }
+}
+.team-page-gallery__link-pinterest {
+    background: url("../../images/icon-pinterest.svg") no-repeat center;
+    &:hover {
+        background-image: url("../../images/icon-pinterest-hover.svg");
+    }
+}
+.team-page-gallery__link-instagram {
+    background: url("../../images/icon-instagram.svg") no-repeat center;
+    &:hover {
+        background-image: url("../../images/icon-instagram-hover.svg");
+    }
+}
+.team-page-gallery__name {
+    .montserrat(700, 0.93rem, #333333, 0.5em, uppercase);
+    text-align: center;
+}
+.team-page-gallery__post {
+    .roboto(400, 1rem, #999999, 0, none);
+    font-style: italic;
+    text-align: center;
+}
+
+
+//ЛЕНТА С ЛОГОТИПАМИ
+.logos-band {
+    width: 100%;
+    min-width: 920px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    background-color: #f8f8f8;
+    & .content {
+        .flex-row(space-between, center);
+        height: 100%;
+    }
+}
+
+
+//ПРИМЕРЫ НАШИХ РАБОТ
+
+.our-work-page {
+    padding-top: 90px;
+    & .main-text-page {
+        margin-bottom: 100px;
+    }
+}
+.our-work-page-gallery-wrap-1 {
+    width: 100%;
+    min-width: 920px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.our-work-page-gallery-wrap-2 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%;
+}
+.our-work-page-gallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    -ms-grid-rows: 50% 50%;
+}
+.our-work-page-gallery__img-6 {
+    grid-column-start: 3;
+    -ms-grid-column: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    -ms-grid-row: 1;
+    grid-row-end: 3;
 }
