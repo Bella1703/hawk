@@ -1,5 +1,5 @@
 import Scrollbar from "smooth-scrollbar/dist/smooth-scrollbar";
-import slick from "slick-carousel/slick/slick.min";
+
 
 
 //АККОРДЕОН НА СТРАНИЦЕ "ЛЮБОЙ ФОРМАТ"
@@ -8,7 +8,9 @@ let formatPageGalleryListContentBlocks = document.body.querySelectorAll('.format
 
 formatPageGalleryList.addEventListener('click', showContentFormatPage);
 function showContentFormatPage(event) {
-    let target = event.target && event.target.closest('.format-page-gallery-list__title-block');
+    let target = event.target;
+    let targetParent = event.target.parentElement;
+    let targetParentParent = event.target.parentElement.parentElement;
 
     if (target.classList.contains('format-page-gallery-list__title-block')) {
         if (target.nextElementSibling.classList.contains('display-none-important')) {
@@ -30,6 +32,49 @@ function showContentFormatPage(event) {
             target.parentElement.removeAttribute("style");
         }
     }
+
+    if (target.parentElement.classList.contains('format-page-gallery-list__title-block')) {
+        if (target.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
+                formatPageGalleryListContentBlock.classList.add('display-none-important');
+            }
+        }
+        target.parentElement.nextElementSibling.classList.toggle('display-none-important');
+
+
+        for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
+            formatPageGalleryListContentBlock.parentElement.removeAttribute("style");
+        }
+
+
+        if (!target.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.parentElement.style.height = '100%';
+        } else if (target.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.parentElement.removeAttribute("style");
+        }
+    }
+
+    if (target.parentElement.parentElement.classList.contains('format-page-gallery-list__title-block')) {
+        if (target.parentElement.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
+                formatPageGalleryListContentBlock.classList.add('display-none-important');
+            }
+        }
+        target.parentElement.parentElement.nextElementSibling.classList.toggle('display-none-important');
+
+
+        for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
+            formatPageGalleryListContentBlock.parentElement.removeAttribute("style");
+        }
+
+
+        if (!target.parentElement.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.parentElement.parentElement.style.height = '100%';
+        } else if (target.parentElement.parentElement.nextElementSibling.classList.contains('display-none-important')) {
+            target.parentElement.parentElement.parentElement.removeAttribute("style");
+        }
+    }
+
 }
 
 //изменение стрелок в аккардеоне
@@ -59,14 +104,66 @@ for (let scrollElem of scrollElems) {
 
 
 //СЛАЙДЕР НА ЛЕНТЕ С ЦИТАТАМИ
-$('.quote-list').slick({
+$('.first-quote-list').slick({
     dots: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    prevArrow: '.quote-list-arrow-left',
-    nextArrow: '.quote-list-arrow-right',
+    prevArrow: '.first-quote-list-arrow-left',
+    nextArrow: '.first-quote-list-arrow-right',
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 7000,
+});
+
+//СЛАЙДЕР НА ВТОРОЙ ЛЕНТЕ С ЦИТАТАМИ
+$('.second-quote-list').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: '.second-quote-list-arrow-left',
+    nextArrow: '.second-quote-list-arrow-right',
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
+});
+
+
+//МОДАЛЬНОЕ ОКНО
+let modalWindow = document.body.querySelector(".modal-window");
+let submit = document.body.querySelector(".footer-level-1-col-1__submit");
+let xIcon = document.body.querySelector(".modal-window__x-icon");
+let modalWindowBackground = document.body.querySelector(".modal-window__background");
+
+xIcon.addEventListener('click', hideModalWindow);
+modalWindowBackground.addEventListener("click", hideModalWindow);
+
+function showModalWindow() {
+    modalWindow.classList.remove("display-none");
+    document.body.style.overflow = "hidden";
+    setTimeout(hideModalWindow, 5000);
+}
+function hideModalWindow() {
+    modalWindow.classList.add("display-none");
+    document.body.style.overflow = "";
+}
+
+
+submit.addEventListener("click", function(){
+    let isError = false;
+    let email = document.body.querySelector('#mail');
+    let errorMail = document.querySelector('.error-mail');
+    if (!email.validity.valid || email.value.length < 2) {
+        isError = true;
+        errorMail.innerHTML = "Введите корректный адрес электронной почты";
+        email.classList.add("invalid");
+    } else {
+        errorMail.innerHTML = "";
+        email.classList.remove("invalid");
+    }
+    if(!isError){
+        showModalWindow();
+        email.value = "";
+    }
 });

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack Boilerplate</title>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Ястреб</title>
     <link rel="stylesheet" type="text/css" href="/assets/bundle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" nomodule></script>
     <link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic"
           rel="stylesheet">
@@ -45,6 +47,7 @@
         <h1 class="title-1">Ястреб</h1>
     </div>
 </div>
+
 <div class="about-us-page">
     <div class="content">
         <h4 class="title-4">Чем мы занимаемся...</h4>
@@ -56,26 +59,33 @@
             систем, надежной административной системой, красивым дизайном и удобством для посетителей сайта. И все это
             мы делаем по весьма демократичным ценам.
         </div>
-        <div class="about-us-page-gallery">
-            <div class="about-us-page-gallery__background-hover"></div>
-            <div class="about-us-page-gallery__item">
-                <img class="about-us-page-gallery__img" src="images/about-us-page-img-1.png">
-                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
-                <div class="about-us-page-gallery__title">Качество</div>
-            </div>
-            <div class="about-us-page-gallery__item">
-                <img class="about-us-page-gallery__img" src="images/about-us-page-img-2.png">
-                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
-                <div class="about-us-page-gallery__title">Надежность</div>
-            </div>
-            <div class="about-us-page-gallery__item">
-                <img class="about-us-page-gallery__img" src="images/about-us-page-img-3.png">
-                <img class="about-us-page-gallery__img-hover" src="images/about-us-page-gallery-hover.png">
-                <div class="about-us-page-gallery__title">Красота</div>
+        <div class="about-us-page-gallery__wrap-1">
+            <div class="about-us-page-gallery__wrap-2">
+                <div class="about-us-page-gallery">
+                    <div class="about-us-page-gallery__item">
+                        <div class="about-us-page-gallery__img about-us-page-gallery__img-1">
+                            <div class="about-us-page-gallery__background"></div>
+                        </div>
+                        <div class="about-us-page-gallery__title">Качество</div>
+                    </div>
+                    <div class="about-us-page-gallery__item">
+                        <div class="about-us-page-gallery__img about-us-page-gallery__img-2">
+                            <div class="about-us-page-gallery__background"></div>
+                        </div>
+                        <div class="about-us-page-gallery__title">Надежность</div>
+                    </div>
+                    <div class="about-us-page-gallery__item">
+                        <div class="about-us-page-gallery__img about-us-page-gallery__img-3">
+                            <div class="about-us-page-gallery__background"></div>
+                        </div>
+                        <div class="about-us-page-gallery__title">Красота</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="numbers-band">
     <div class="content">
         <ul>
@@ -102,6 +112,7 @@
         </ul>
     </div>
 </div>
+
 <div class="services-page">
     <div class="content">
         <h4 class="title-4">Мы работаем с...</h4>
@@ -182,6 +193,7 @@
         </ul>
     </div>
 </div>
+
 <div class="adaptive-design-page">
     <div class="content">
         <h4 class="title-4">Для всех устройств...</h4>
@@ -190,6 +202,7 @@
         <img src="images/adaptive-design-page-img.png">
     </div>
 </div>
+
 <div class="format-page">
     <div class="content">
         <h4 class="title-4">Услуги...</h4>
@@ -205,7 +218,9 @@
             <div class="format-page-gallery-list-wrap-1">
                 <div class="format-page-gallery-list-wrap-2">
                     <ul class="format-page-gallery-list">
+
                         <li class="format-page-gallery-list__item">
+
                             <div class="format-page-gallery-list__title-block">
                                 <div class="format-page-gallery-list__title-block-left">
                                     <img class="format-page-gallery-list__icon"
@@ -215,6 +230,7 @@
                                 <div
                                     class="format-page-gallery-list__arrow-icon format-page-gallery-list__arrow-icon-down"></div>
                             </div>
+
                             <div class="format-page-gallery-list__content-block display-none-important">
                                 <div class="format-page-gallery-list__content-block-inner-1">
                                     <div class="format-page-gallery-list__content-block-inner-2">
@@ -320,11 +336,12 @@
         </div>
     </div>
 </div>
+
 <div class="quote-band">
     <div class="content">
-        <div class="quote-list-arrow quote-list-arrow-left"></div>
-        <div class="quote-list-arrow quote-list-arrow-right"></div>
-        <ul class="quote-list">
+        <div class="quote-list-arrow quote-list-arrow-left first-quote-list-arrow-left"></div>
+        <div class="quote-list-arrow quote-list-arrow-right first-quote-list-arrow-right"></div>
+        <ul class="quote-list first-quote-list">
             <li class="quote-list-item">
                 <img src="images/quote-band-img.png">
                 <div class="quote-list-item__content">
@@ -367,6 +384,7 @@
         </ul>
     </div>
 </div>
+
 <div class="team-page">
     <div class="content">
         <h4 class="title-4">Кто мы...</h4>
@@ -377,87 +395,95 @@
             каждого из которых
             мы можем ручаться, что он специалист высокого уровня.
         </div>
-        <div class="team-page-gallery">
-            <div class="team-page-gallery__background-hover"></div>
-            <div class="team-page-gallery__item-wrap">
-                <div class="team-page-gallery__item">
-                    <img class="team-page-gallery__img" src="images/team-page-img-1.png">
-                    <img class="team-page-gallery__img-hover" src="images/team-page-gallery-hover.png">
-                    <div class="team-page-gallery__link-block">
-                        <a href="https://www.facebook.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
-                        </a>
-                        <a href="https://twitter.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
-                        </a>
-                        <a href="https://www.pinterest.ru/">
-                            <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
-                        </a>
-                        <a href="https://www.instagram.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
-                        </a>
+        <div class="team-page-gallery__wrap-1">
+            <div class="team-page-gallery__wrap-2">
+                <div class="team-page-gallery">
+                    <div class="team-page-gallery__background-hover"></div>
+                    <div class="team-page-gallery__item-wrap">
+                        <div class="team-page-gallery__item">
+                            <div class="team-page-gallery__img team-page-gallery__img-1">
+                                <div class="team-page-gallery__background"></div>
+                            </div>
+                            <div class="team-page-gallery__link-block">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
+                                </a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
+                                </a>
+                                <a href="https://www.pinterest.ru/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-page-gallery__name">Алексей Островский</div>
+                        <div class="team-page-gallery__post">SEO-специалист</div>
+                    </div>
+                    <div class="team-page-gallery__item-wrap">
+                        <div class="team-page-gallery__item">
+                            <div class="team-page-gallery__img team-page-gallery__img-2">
+                                <div class="team-page-gallery__background"></div>
+                            </div>
+                            <div class="team-page-gallery__link-block">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
+                                </a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
+                                </a>
+                                <a href="https://www.pinterest.ru/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-page-gallery__name">Петр Стародубцев</div>
+                        <div class="team-page-gallery__post">Дизайнер</div>
+                    </div>
+                    <div class="team-page-gallery__item-wrap">
+                        <div class="team-page-gallery__item">
+                            <div class="team-page-gallery__img team-page-gallery__img-3">
+                                <div class="team-page-gallery__background"></div>
+                            </div>
+                            <div class="team-page-gallery__link-block">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
+                                </a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
+                                </a>
+                                <a href="https://www.pinterest.ru/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-page-gallery__name">Вадим Даниленко</div>
+                        <div class="team-page-gallery__post">Разработчик</div>
                     </div>
                 </div>
-                <div class="team-page-gallery__name">Алексей Островский</div>
-                <div class="team-page-gallery__post">SEO-специалист</div>
-            </div>
-            <div class="team-page-gallery__item-wrap">
-                <div class="team-page-gallery__item">
-                    <img class="team-page-gallery__img" src="images/team-page-img-2.png">
-                    <img class="team-page-gallery__img-hover" src="images/team-page-gallery-hover.png">
-                    <div class="team-page-gallery__link-block">
-                        <a href="https://www.facebook.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
-                        </a>
-                        <a href="https://twitter.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
-                        </a>
-                        <a href="https://www.pinterest.ru/">
-                            <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
-                        </a>
-                        <a href="https://www.instagram.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-page-gallery__name">Петр Стародубцев</div>
-                <div class="team-page-gallery__post">Дизайнер</div>
-            </div>
-            <div class="team-page-gallery__item-wrap">
-                <div class="team-page-gallery__item">
-                    <img class="team-page-gallery__img" src="images/team-page-img-3.png">
-                    <img class="team-page-gallery__img-hover" src="images/team-page-gallery-hover.png">
-                    <div class="team-page-gallery__link-block">
-                        <a href="https://www.facebook.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-facebook"></div>
-                        </a>
-                        <a href="https://twitter.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-twitter"></div>
-                        </a>
-                        <a href="https://www.pinterest.ru/">
-                            <div class="team-page-gallery__link team-page-gallery__link-pinterest"></div>
-                        </a>
-                        <a href="https://www.instagram.com/">
-                            <div class="team-page-gallery__link team-page-gallery__link-instagram"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-page-gallery__name">Вадим Даниленко</div>
-                <div class="team-page-gallery__post">Разработчик</div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="logos-band">
     <div class="content">
-        <img src="images/logo-c">
-        <img src="images/logos-band-img-2.png">
-        <img src="images/logos-band-img-3.png">
-        <img src="images/logos-band-img-4.png">
-        <img src="images/logos-band-img-5.png">
-        <img src="images/logos-band-img-6.png">
+        <img src="images/logo-citroen.png">
+        <img src="images/logo-kb-stroy.png">
+        <img src="images/logo-jantarnyi.png">
+        <img src="images/logo-mozart.png">
+        <img src="images/logo-olimp.png">
     </div>
 </div>
+
 <div class="our-work-page">
     <div class="content">
         <h4 class="title-4">Что мы делаем...</h4>
@@ -473,18 +499,369 @@
     </div>
     <div class="our-work-page-gallery-wrap-1">
         <div class="our-work-page-gallery-wrap-2">
-    <div class="our-work-page-gallery">
-        <img class="our-work-page-gallery__img-1"  src="images/our-work-page-gallery-img-1.png">
-        <img class="our-work-page-gallery__img-2"  src="images/our-work-page-gallery-img-2.png">
-        <img class="our-work-page-gallery__img-3" src="images/our-work-page-gallery-img-3.png">
-        <img class="our-work-page-gallery__img-4"  src="images/our-work-page-gallery-img-4.png">
-        <img class="our-work-page-gallery__img-5"  src="images/our-work-page-gallery-img-5.png">
-        <img class="our-work-page-gallery__img-6" src="images/our-work-page-gallery-img-6.png">
-        <img class="our-work-page-gallery__img-7"  src="images/our-work-page-gallery-img-7.png">
-    </div>
+            <div class="our-work-page-gallery">
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-1" src="images/our-work-page-gallery-img-1.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Интернет-магазин</div>
+                        <a href="https://milla.com" class="our-work-page-gallery__title-url" target="_blank">https://milla.com</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-2" src="images/our-work-page-gallery-img-2.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Лендинг</div>
+                        <a href="http://beer-town.com" class="our-work-page-gallery__title-url" target="_blank">http://beer-town.com</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-3" src="images/our-work-page-gallery-img-3.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Брендинг</div>
+                        <a href="http://nov-museum.ru" class="our-work-page-gallery__title-url" target="_blank">http://nov-museum.ru</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-4" src="images/our-work-page-gallery-img-4.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Лендинг</div>
+                        <a href="http://ja.com" class="our-work-page-gallery__title-url"
+                           target="_blank">http://ja.com</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img our-work-page-gallery__img-big">
+                    <img class="our-work-page-gallery__img-5" src="images/our-work-page-gallery-img-5.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Брендинг</div>
+                        <a href="http://aquacity.ru" class="our-work-page-gallery__title-url" target="_blank">http://aquacity.ru</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-6" src="images/our-work-page-gallery-img-6.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Интернет-магазин</div>
+                        <a href="http://coloop.com" class="our-work-page-gallery__title-url" target="_blank">http://coloop.com</a>
+                    </div>
+                </div>
+                <div class="our-work-page-gallery__img">
+                    <img class="our-work-page-gallery__img-7" src="images/our-work-page-gallery-img-7.png">
+                    <div class="our-work-page-gallery__title">
+                        <div class="our-work-page-gallery__title-name">Корпоративный сайт</div>
+                        <a href="https://ast1.ru" class="our-work-page-gallery__title-url" target="_blank">https://ast1.ru</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="second-quote-band">
+    <div class="content">
+        <div class="quote-list-arrow quote-list-arrow-left second-quote-list-arrow-left"></div>
+        <div class="quote-list-arrow quote-list-arrow-right second-quote-list-arrow-right"></div>
+        <ul class="quote-list second-quote-list">
+            <li class="quote-list-item">
+                <img class="quote-list-item__img" src="images/jobs.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Дизайн – это не то, как предмет выглядит, а то, как он работает»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Стив Джобс</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="quote-list-item">
+                <img class="quote-list-item__img" src="images/sparano.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Хороший дизайн виден сразу. Отличный дизайн незаметен»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Джо Спарано</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="quote-list-item">
+                <img class="quote-list-item__img" src="images/lebedev.png">
+                <div class="quote-list-item__content">
+                    <div class="quote-list-item__text">
+                        «Дизайн должен быть простым, но не примитивным»
+                    </div>
+                    <div class="quote-list-item__by-line">
+                        <div class="separator"></div>
+                        <div class="quote-list-item__author-name">Артемий Лебедев</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="reviews-page">
+    <div class="content">
+        <h4 class="title-4">Что о нас говорят...</h4>
+        <h3 class="title-3">Отзывы клиентов</h3>
+        <div class="separator"></div>
+        <ul class="reviews-page-list">
+            <li class="reviews-page-list-item">
+                <img src="images/reviews-page-list-img-1.png">
+                <div class="reviews-page-list-item__content">
+                    <div class="reviews-page-list-item__name">Алексей Леонов</div>
+                    <div class="reviews-page-list-item__post">Директор</div>
+                    <div class="separator"></div>
+                    <div class="reviews-page-list-item__text">
+                        Мы благодарны за высокий
+                        профессионализм, умение предложить решение без ущерба для
+                        качества исполнения и результата.
+                    </div>
+                </div>
+            </li>
+
+            <li class="reviews-page-list-item">
+                <img src="images/reviews-page-list-img-2.png">
+                <div class="reviews-page-list-item__content">
+                    <div class="reviews-page-list-item__name">Леонид Выборный</div>
+                    <div class="reviews-page-list-item__post">Менеджер по маркетингу</div>
+                    <div class="separator"></div>
+                    <div class="reviews-page-list-item__text">
+                        Итогом работы мы довольны, комплекс
+                        обрёл
+                        имя, рекламная продукция пошла в печать, сайт приносит клиентов.
+                    </div>
+                </div>
+            </li>
+
+            <li class="reviews-page-list-item">
+                <img src="images/reviews-page-list-img-3.png">
+                <div class="reviews-page-list-item__content">
+                    <div class="reviews-page-list-item__name">Владимир Москатов</div>
+                    <div class="reviews-page-list-item__post">Генеральный директор</div>
+                    <div class="separator"></div>
+                    <div class="reviews-page-list-item__text">
+                        Поставленные нами задачи были выполнены компетентно,
+                        качественно и в кратчайшие
+                        сроки, сайт отвечает всем указанным нами требованиям.
+                    </div>
+                </div>
+            </li>
+
+            <li class="reviews-page-list-item">
+                <img src="images/reviews-page-list-img-4.png">
+                <div class="reviews-page-list-item__content">
+                    <div class="reviews-page-list-item__name">Петр Стародубцев</div>
+                    <div class="reviews-page-list-item__post">Директор</div>
+                    <div class="separator"></div>
+                    <div class="reviews-page-list-item__text">
+                        В работе хочется
+                        отметить внимательное отношение, умение понять потребности и суть задачи, вести
+                        конструктивный диалог.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="article-page">
+    <div class="content">
+        <h4 class="title-4">Последнее из блога...</h4>
+        <h3 class="title-3">Наши статьи</h3>
+        <div class="separator"></div>
+        <ul class="article-page-list">
+
+            <li class="article-page-list-item">
+                <a href="https://www.google.com/" target="_blank">
+                    <div class="article-page-list-item__img">
+                        <img class="article-page-list-item__photo" src="images/article-page-img-1.png">
+                        <div class="article-page-list-item__date-block">
+                            <div class="article-page-list-item__date-block-number">14</div>
+                            <div class="article-page-list-item__date-block-month">дек</div>
+                        </div>
+                    </div>
+                    <div class="article-page-list-item__title">Обратная связь</div>
+                    <div class="article-page-list-item__text">
+                        Узнайте что такое онлайн-консультант для сайта и почему он вам нужен.
+                    </div>
+                    <div class="article-page-list-item__separator"></div>
+                    <div class="article-page-list-item__info">
+                        <img src="images/view-icon.svg">
+                        <span>1560</span>
+                        <img src="images/comment-icon.svg">
+                        <span>98</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="article-page-list-item">
+                <a href="https://www.google.com/" target="_blank">
+                    <div class="article-page-list-item__img">
+                        <img class="article-page-list-item__photo" src="images/article-page-img-2.png">
+                        <div class="article-page-list-item__date-block">
+                            <div class="article-page-list-item__date-block-number">16</div>
+                            <div class="article-page-list-item__date-block-month">дек</div>
+                        </div>
+                    </div>
+
+                    <div class="article-page-list-item__title">Ошибки</div>
+                    <div class="article-page-list-item__text">
+                        Разберем самые досадные ошибки, которые допускают при создании сайта.
+                    </div>
+                    <div class="article-page-list-item__separator"></div>
+                    <div class="article-page-list-item__info">
+                        <img src="images/view-icon.svg">
+                        <span>992</span>
+                        <img src="images/comment-icon.svg">
+                        <span>42</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="article-page-list-item">
+                <a href="https://www.google.com/" target="_blank">
+                    <div class="article-page-list-item__img">
+                        <img class="article-page-list-item__photo" src="images/article-page-img-3.png">
+                        <div class="article-page-list-item__date-block">
+                            <div class="article-page-list-item__date-block-number">17</div>
+                            <div class="article-page-list-item__date-block-month">дек</div>
+                        </div>
+                    </div>
+
+                    <div class="article-page-list-item__title">Безопасность</div>
+                    <div class="article-page-list-item__text">
+                        Как защитить свой сайт: виды угроз безопасности и способы их избежать.
+                    </div>
+                    <div class="article-page-list-item__separator"></div>
+                    <div class="article-page-list-item__info">
+                        <img src="images/view-icon.svg">
+                        <span>542</span>
+                        <img src="images/comment-icon.svg">
+                        <span>17</span>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="map-band">
+    <img src="images/map-icon.svg">
+    <a class="map-band__title" href="https://clck.ru/LEVCJ" target="_blank">Открыть карту</a>
+    <div class="separator"></div>
+</div>
+
+<footer class="footer">
+    <div class="content">
+        <div class="footer-level-1">
+            <div class="footer-level-1__col-1 footer-level-1-col-1">
+                <div class="logo footer-level-1-col-1__logo">Ястреб</div>
+                <div class="footer-level-1-col-1__text">
+                    Веб-студия «Ястреб» специализируется на предоставлении качественных и эффективных интернет-услуг. С
+                    нашей помощью Вы можете создать презентабельный сайт и организовать прибыльные продажи своей
+                    продукции.
+                </div>
+                <div class="footer-level-1-col-1__followers">15 тыс. &nbsp<span>подписчиков</span></div>
+                <div class="footer-level-1-col-1__separator"></div>
+                <div class="follow-us">
+                    <span>Подписывайтесь на нас:</span>
+                    <a href="https://www.facebook.com/" target="_blank" class="facebook-icon-mini"></a>
+                    <a href="https://twitter.com/" target="_blank" class="twitter-icon-mini"></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="instagram-icon-mini"></a>
+                    <a href="https://www.pinterest.com/" target="_blank" class="pinterest-icon-mini"></a>
+                    <a href="https://www.google.com//" target="_blank" class="google-plus-icon-mini"></a>
+                    <a href="https://www.youtube.com/" target="_blank" class="youtube-icon-mini"></a>
+                    <a href="https://dribbble.com/" target="_blank" class="dribbble-icon-mini"></a>
+                    <a href="https://www.tumblr.com/" target="_blank" class="tumblr-icon-mini"></a>
+                </div>
+                <div class="footer-level-1-col-1__form">
+                    <input type="email" placeholder="Ваш Email..." name="email"
+                           class="footer-level-1-col-1__input-email" id="mail">
+                    <span class="error-mail" aria-live="polite"></span>
+                    <input type="submit" value="Подписаться" class="footer-level-1-col-1__submit"
+                           onsubmit="return false">
+                </div>
+
+
+            </div>
+
+            <div class="footer-level-1__col-2 footer-level-1-col-2">
+                <div class="footer-level-1-col-2__title">Блог</div>
+                <ul class="footer-level-1-col-2__list">
+
+                    <li>
+                        <a href="https://www.google.com/" class="footer-level-1-col-2__list-item" target="_blank">
+                            <img src="images/footer-blog-img-1.png">
+                            <div class="footer-level-1-col-2__list-item-text">
+                                <div class="footer-level-1-col-2__list-item-title">
+                                    Что означают вайрфрейм, мокап и прототип
+                                </div>
+                                <div class="footer-level-1-col-2__list-item-date">15 декабря, 2019</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.google.com/" class="footer-level-1-col-2__list-item" target="_blank">
+                            <img src="images/footer-blog-img-2.png">
+                            <div class="footer-level-1-col-2__list-item-text">
+                                <div class="footer-level-1-col-2__list-item-title">
+                                    Как выбрать доменное имя?
+                                </div>
+                                <div class="footer-level-1-col-2__list-item-date">13 декабря, 2019</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.google.com/" class="footer-level-1-col-2__list-item" target="_blank">
+                            <img src="images/footer-blog-img-3.png">
+                            <div class="footer-level-1-col-2__list-item-text">
+                                <div class="footer-level-1-col-2__list-item-title">
+                                    Лид-форма на сайте: как и зачем ее создавать
+                                </div>
+                                <div class="footer-level-1-col-2__list-item-date">11 декабря, 2019</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-level-1__col-3 footer-level-1-col-3">
+                <div class="footer-level-1-col-3__title">Instagram</div>
+                <div class="footer-level-1-col-3__photos">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-1.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-2.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-3.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-4.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-5.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-6.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-7.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-8.png"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-9.png"></a>
+                </div>
+                <a class="footer-level-1-col-3__text">Смотреть больше фото</a>
+            </div>
+
+        </div>
+        <div class="footer__separator"></div>
+        <div class="footer-level-2">
+            © 2016 Веб-студия &nbsp <span>«Ястреб»</span>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-window display-none">
+    <div class="modal-window__background"></div>
+    <div class="modal-window__content">Спасибо!<br>Ваш запрос отправлен!</div>
+    <div class="modal-window__x-icon">×</div>
+</div>
+
 
 <script type="text/javascript" src="/assets/bundle.js"></script>
 </body>
