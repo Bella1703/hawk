@@ -14,8 +14,11 @@ a:focus {
 }
 
 //ОБЩИЕ
-.body {
+html {
     font-size: 15px;
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
 }
 
 .display-none {
@@ -32,21 +35,28 @@ a:focus {
     margin-right: auto;
     .flex-col();
     @media (max-width: 575px) {
-        width: 515px;
-        min-width: 515px;
+        width: 535px;
+        min-width: 535px;
     }
 }
 
 .title-1 {
     .montserrat(700, 10rem, #ffffff, 0, uppercase);
+    @media (max-width: 575px) {
+        font-size: 5rem;
+    }
 }
 
 .title-2 {
     .pattaya(400, 4.8rem, #ffffff, 0.5em);
+    @media (max-width: 575px) {
+        font-size: 2.4rem;
+    }
 }
 
 .title-3 {
     .montserrat(700, 2rem, #333333, 1em, uppercase);
+    text-align: center;
 }
 
 .title-4 {
@@ -79,8 +89,22 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     background: url("../../images/main-page.png") no-repeat center;
+    position: relative;
     @media (max-width: 575px) {
-        width: 555px;
+        width: 575px;
+        min-width: 575px;
+    }
+    & .title-1 {
+         @media (max-width: 575px) {
+             position: absolute;
+             top: 50%;
+         }
+     }
+    & .title-2 {
+        @media (max-width: 575px) {
+            position: absolute;
+            top: calc(50% - 72px);
+        }
     }
 
     & .content {
@@ -129,6 +153,9 @@ a:focus {
     & li {
         height: 30px;
     }
+    @media (max-width: 575px) {
+        display: none;
+    }
 }
 
 .nav-list-item-underline {
@@ -144,7 +171,36 @@ a:focus {
 .nav-list a:hover + div {
     display: block;
 }
-
+.nav-burger {
+    .flex-col(flex-start, flex-end);
+}
+.nav-burger-icon {
+    width: 50px;
+    height: 36px;
+    display: none;
+    background: url("../../images/nav.svg") no-repeat;
+    @media (max-width: 575px) {
+        display: block;
+    }
+    &:hover {
+        background: url("../../images/nav-hover.svg");
+    }
+}
+.nav-list-small {
+    width: 197px;
+    height: 390px;
+    text-align: end;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    & a {
+        .montserrat(400, 0.93rem, #ffffff, 0, uppercase);
+        padding: 30px 10px;
+        display: inline-block;
+    }
+    & a:hover {
+        color: #fce38a;
+    }
+}
 
 //О НАС
 .about-us-page {
@@ -152,9 +208,11 @@ a:focus {
     max-width: 1920px;
     min-width: 920px;
     padding-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -270,8 +328,8 @@ a:focus {
     margin-right: auto;
     background-color: #95e1d3;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 
     & .content,
@@ -294,7 +352,8 @@ a:focus {
     .montserrat(700, 4.8rem, #ffffff, 0.4em, uppercase);
     text-align: center;
     @media (max-width: 575px) {
-        .montserrat(700, 4.8rem, #ffffff, 5px, uppercase);
+        margin-bottom: 5px;
+        font-size: 3rem;
     }
 }
 
@@ -332,8 +391,8 @@ a:focus {
     padding-top: 90px;
     margin-bottom: 90px;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -432,8 +491,8 @@ a:focus {
         }
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -446,8 +505,8 @@ a:focus {
         margin-bottom: 92px;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -457,6 +516,10 @@ a:focus {
 
     & .format-page-gallery__img {
         width: calc((100% - 30px) / 2);
+        @media (max-width: 575px) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
     }
 
     margin-bottom: 120px;
@@ -464,22 +527,35 @@ a:focus {
     & .format-page-gallery-list__item {
         margin-bottom: 10px;
     }
+    @media (max-width: 575px) {
+        .flex-col(flex-start, center);
+    }
 }
 
 .format-page-gallery-list-wrap-1 {
     width: calc((100% - 30px) / 2);
+    @media (max-width: 575px) {
+        width: 100%;
+    }
 }
 
 .format-page-gallery-list-wrap-2 {
     position: relative;
     width: 100%;
+    height: 100%;
     padding-bottom: 66%;
+    @media (max-width: 575px) {
+        padding-bottom: 0;
+    }
 }
 
 .format-page-gallery-list {
     position: absolute;
     width: 100%;
     height: 100%;
+    @media (max-width: 575px) {
+        position: static;
+    }
 }
 
 .format-page-gallery-list__item {
@@ -532,6 +608,9 @@ a:focus {
     height: calc(100% - 60px);
     padding: 20px 0 0 20px;
     display: block;
+    @media (max-width: 575px) {
+        height: 300px;
+    }
 }
 
 .display-none-important {
@@ -587,8 +666,8 @@ a:focus {
         .flex-row();
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -604,6 +683,9 @@ a:focus {
 }
 
 .quote-list-item {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
     & img {
         margin-right: 60px;
         display: inline-block;
@@ -611,6 +693,9 @@ a:focus {
         margin-left: 1px;
         @media (max-width: 1110px) {
             margin-right: 24px;
+        }
+        @media (max-width: 575px) {
+            display: none;
         }
     }
 
@@ -622,16 +707,26 @@ a:focus {
 
 .quote-list-item__by-line {
     .flex-row(flex-start, center);
+    @media (max-width: 575px) {
+        .flex-row(center, center);
+    }
 }
 
 .quote-list-item__text {
     .roboto(400, 1.6rem, #999999, 1em, none);
     font-style: italic;
+    @media (max-width: 575px) {
+        text-align: center;
+        font-size: 1.4rem;
+    }
 }
 
 .quote-list-item__author-name {
     .pattaya(400, 1.6rem, #333333, 0, none);
     font-style: italic;
+    @media (max-width: 575px) {
+        font-size: 1.4rem;
+    }
 }
 
 //СЛАЙДЕР НА ПОЛОСЕ С ЦИТАТАМИ
@@ -659,8 +754,8 @@ a:focus {
 .team-page {
     padding-top: 90px;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -682,24 +777,38 @@ a:focus {
     & .team-page-gallery__item:hover .team-page-gallery__link-block {
         .flex-row();
     }
+    @media (max-width: 575px) {
+        .flex-col(flex-start, center);
+    }
 }
 
 .team-page-gallery__wrap-1 {
     width: 100%;
     padding-top: 92px;
     margin-bottom: 189px;
+    @media (max-width: 575px) {
+        height: 2251px;
+        margin-bottom: 60px;
+    }
 }
 
 .team-page-gallery__wrap-2 {
     position: relative;
     width: 100%;
     padding-bottom: 39.17%;
+    @media (max-width: 575px) {
+        padding-bottom: 0;
+        height: 100%;
+    }
 }
 
 .team-page-gallery {
     position: absolute;
     width: 100%;
     height: 100%;
+    @media (max-width: 575px) {
+        position: static;
+    }
 }
 
 .team-page-gallery__item-wrap {
@@ -709,6 +818,11 @@ a:focus {
     &:hover .team-page-gallery__background {
         opacity: 1;
     }
+
+    @media (max-width: 575px) {
+        width: 100%;
+        height: 720px;
+    }
 }
 
 .team-page-gallery__item {
@@ -717,6 +831,10 @@ a:focus {
     background-color: #95e1d3;
     position: relative;
     margin-bottom: 30px;
+    @media (max-width: 575px) {
+        width: 495px;
+        height: 612px;
+    }
 }
 
 .team-page-gallery__img {
@@ -827,17 +945,25 @@ a:focus {
     margin-right: auto;
     height: 250px;
     background-color: #f8f8f8;
+    & img {
+        @media (max-width: 575px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
 
     & .content {
         .flex-row(space-between, center);
         height: 100%;
         @media (max-width: 575px) {
+            .flex-row(center, center);
             flex-wrap: wrap;
         }
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
+        height: 300px;
     }
 }
 
@@ -850,8 +976,8 @@ a:focus {
         margin-bottom: 100px;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -862,8 +988,8 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -871,6 +997,9 @@ a:focus {
     position: relative;
     width: 100%;
     padding-bottom: 40%;
+    @media (max-width: 575px) {
+        padding-bottom: 0;
+    }
 }
 
 .our-work-page-gallery {
@@ -889,6 +1018,11 @@ a:focus {
     & a:hover {
         color: #333333;
     }
+
+    @media (max-width: 575px) {
+       position: static;
+        max-height: 936px;
+    }
 }
 
 .our-work-page-gallery__img {
@@ -897,6 +1031,10 @@ a:focus {
     width: 25%;
     height: 50%;
     position: relative;
+    @media (max-width: 575px) {
+        width: 50%;
+        height: 50%;
+    }
 }
 
 .our-work-page-gallery__img:hover img {
@@ -910,6 +1048,10 @@ a:focus {
 .our-work-page-gallery__img-big {
     width: 25%;
     height: 100%;
+    @media (max-width: 575px) {
+        width: 50%;
+        height: 100%;
+    }
 }
 
 .our-work-page-gallery__title {
@@ -947,8 +1089,8 @@ a:focus {
         position: relative;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -967,9 +1109,11 @@ a:focus {
     margin-right: auto;
     padding-top: 90px;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../images/reviews-page-background.png") no-repeat center;
+    background-size: cover;
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
+        height: 1330px;
     }
 }
 
@@ -986,6 +1130,9 @@ a:focus {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    @media (max-width: 575px) {
+        .flex-col(flex-start, flex-start);
+    }
 }
 
 .reviews-page-list-item {
@@ -999,6 +1146,9 @@ a:focus {
 
     & .separator {
         margin-bottom: 1em;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
     }
 }
 
@@ -1031,14 +1181,17 @@ a:focus {
         justify-content: flex-start;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
 .article-page-list {
     width: 100%;
     .flex-row(space-between, flex-start);
+    @media (max-width: 575px) {
+        .flex-col(flex-start, center);
+    }
 }
 
 .article-page-list-item {
@@ -1063,6 +1216,11 @@ a:focus {
     & a:hover {
         border: solid 2px #95e1d3;
     }
+
+    @media (max-width: 575px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .article-page-list-item__date-block {
@@ -1073,6 +1231,10 @@ a:focus {
     position: absolute;
     bottom: 10px;
     left: -10px;
+    @media (max-width: 575px) {
+        width: 100px;
+        height: 110px;
+    }
 }
 
 .article-page-list-item__date-block-number {
@@ -1130,8 +1292,8 @@ a:focus {
         margin-bottom: 0;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
     }
 }
 
@@ -1160,8 +1322,9 @@ a:focus {
         height: auto;
     }
     @media (max-width: 575px) {
-        width: 555px;
-        min-width: 555px;
+        width: 575px;
+        min-width: 575px;
+        height: 1950px;
     }
 }
 
@@ -1186,6 +1349,13 @@ a:focus {
     }
     @media (max-width: 940px) {
         width: 250px;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
     }
 }
 
@@ -1232,76 +1402,98 @@ a:focus {
     & a {
         &:not(:last-child) {
             margin-right: 5px;
+            @media (max-width: 575px) {
+                margin-right: 29px;
+            }
         }
-
         width: 16px;
         height: 16px;
         display: inline-block;
+        @media (max-width: 575px) {
+            width: 32px;
+            height: 32px;
+        }
     }
 
 }
 
 .facebook-icon-mini {
     background: url("../../images/facebook-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/facebook-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .twitter-icon-mini {
     background: url("../../images/twitter-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/twitter-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .instagram-icon-mini {
     background: url("../../images/instagram-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/instagram-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .pinterest-icon-mini {
     background: url("../../images/pinterest-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/pinterest-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .google-plus-icon-mini {
     background: url("../../images/google-plus-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/google-plus-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .youtube-icon-mini {
     background: url("../../images/youtube-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/youtube-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .dribbble-icon-mini {
     background: url("../../images/dribbble-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/dribbble-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
 .tumblr-icon-mini {
     background: url("../../images/tumblr-icon-mini.svg") center no-repeat;
+    background-size: contain;
 
     &:hover {
         background: url("../../images/tumblr-icon-mini-hover.svg") center no-repeat;
+        background-size: contain;
     }
 }
 
@@ -1310,7 +1502,6 @@ a:focus {
     @media (max-width: 1100px) {
         .flex-col(flex-start, flex-start);
     }
-    position: relative;
 }
 
 .footer-level-1-col-1__input-email {
@@ -1333,6 +1524,9 @@ a:focus {
     &::-moz-placeholder {
         color: #cccccc;
     }
+    @media (max-width: 575px) {
+        height: 60px;
+    }
 }
 
 .invalid {
@@ -1348,6 +1542,9 @@ a:focus {
     display: block;
     @media (max-width: 1100px) {
         width: 100%;
+    }
+    @media (max-width: 575px) {
+        height: 60px;
     }
 
     &:hover {
@@ -1368,6 +1565,11 @@ a:focus {
     }
     @media (max-width: 940px) {
         width: 300px;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
     }
 }
 
@@ -1406,6 +1608,12 @@ a:focus {
     &:hover {
         border: solid 1px #95e1d3;
     }
+
+    @media (max-width: 575px) {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
 .footer-level-1-col-2__list-item-text {
@@ -1435,6 +1643,10 @@ a:focus {
         color: #95e1d3;
         cursor: pointer;
     }
+
+    @media (max-width: 575px) {
+        width: 100%;
+    }
 }
 
 .footer-level-1-col-3__photos {
@@ -1448,6 +1660,10 @@ a:focus {
         width: 88px;
         height: 88px;
         margin: 1px;
+        @media (max-width: 575px) {
+            width: 163px;
+            height: 163px;
+        }
     }
 
     & a:hover {
@@ -1457,6 +1673,10 @@ a:focus {
     & a img {
         width: 100%;
         height: 100%;
+    }
+    @media (max-width: 575px) {
+        width: 495px;
+        height: 495px;
     }
 }
 

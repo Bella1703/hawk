@@ -1,5 +1,29 @@
 import Scrollbar from "smooth-scrollbar/dist/smooth-scrollbar";
 
+//ПЛАВНЫЕ ЯКОРНЫЕ ССЫЛКИ
+$(document).ready(function () {
+    $("nav").on("click", "a", function (event) {
+        event.preventDefault();
+        let id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+
+//ВЫПАДАЮЩЕЕ МЕНЮ
+let navBurger = document.body.querySelector(".nav-burger");
+let navListSmall = document.body.querySelector(".nav-list-small");
+
+function Nav() {
+    if (navListSmall.classList.contains("display-none")) {
+        navListSmall.classList.remove("display-none");
+    } else {
+        navListSmall.classList.add("display-none");
+    }
+}
+
+navBurger.addEventListener("click", Nav);
+
 
 
 //АККОРДЕОН НА СТРАНИЦЕ "ЛЮБОЙ ФОРМАТ"
@@ -79,6 +103,7 @@ function showContentFormatPage(event) {
 
 //изменение стрелок в аккардеоне
 let formatPageGalleryListArrowIcon = document.body.querySelector('.format-page-gallery-list__arrow-icon');
+
 formatPageGalleryList.addEventListener('click', changeArrowFormatPageGallery);
 function changeArrowFormatPageGallery(event) {
     for (let formatPageGalleryListContentBlock of formatPageGalleryListContentBlocks) {
@@ -92,6 +117,33 @@ function changeArrowFormatPageGallery(event) {
         }
     }
 }
+
+// formatPageGalleryList.addEventListener('click', changeHeightFormatPageGalleryList);
+//
+// function changeHeightFormatPageGalleryList () {
+//     let formatPageGalleryListItems = document.body.querySelectorAll('.format-page-gallery-list-item');
+//     let formatPageGalleryListContentBlock = document.body.querySelectorAll('.format-page-gallery-list__content-block');
+//
+//
+//     if (formatPageGalleryListItems[0].contains('display-none-important') && formatPageGalleryListItems[1].contains('display-none-important') && formatPageGalleryListItems[2].contains('display-none-important'))
+//     {
+//         formatPageGalleryList.style.height = '250px';
+//     }
+//     else {
+//         formatPageGalleryList.style.height = '500px';
+//     }
+// }
+//
+//
+
+
+
+
+
+
+
+
+
 
 
 //СКРОЛЛБАР НА СТРАНИЦЕ "ЛЮБОЙ ФОРМАТ"
@@ -114,6 +166,8 @@ $('.first-quote-list').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 7000,
+    draggable: true,
+    adaptiveHeight: true,
 });
 
 //СЛАЙДЕР НА ВТОРОЙ ЛЕНТЕ С ЦИТАТАМИ
@@ -127,6 +181,8 @@ $('.second-quote-list').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 7000,
+    draggable: true,
+    adaptiveHeight: true,
 });
 
 

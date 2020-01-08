@@ -12,43 +12,54 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body class="body">
-<!--<div class="main-page">-->
-<!--    <div class="content">-->
-<!--        <header class="header">-->
-<!--            <div class="logo">Ястреб</div>-->
-<!--            <div class="header__right">-->
-<!--                <nav>-->
-<!--                    <ul class="nav-list">-->
-<!--                        <li>-->
-<!--                            <a class="nav-list-item" href="#">О нас</a>-->
-<!--                            <div class="nav-list-item-underline display-none"></div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Услуги</a>-->
-<!--                            <div class="nav-list-item-underline display-none"></div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Примеры работ</a>-->
-<!--                            <div class="nav-list-item-underline display-none"></div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Блог</a>-->
-<!--                            <div class="nav-list-item-underline display-none"></div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Контакты</a>-->
-<!--                            <div class="nav-list-item-underline display-none"></div>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
-<!--            </div>-->
-<!--        </header>-->
-<!--        <h2 class="title-2">Веб-студия</h2>-->
-<!--        <h1 class="title-1">Ястреб</h1>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="main-page">
+    <div class="content">
+        <header class="header">
+            <div class="logo">Ястреб</div>
+            <div class="header__right">
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-list-item" href="#about-us-page">О нас</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#services-page">Услуги</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#our-work-page">Примеры работ</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#article-page">Блог</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                        <li>
+                            <a href="#map-band">Контакты</a>
+                            <div class="nav-list-item-underline display-none"></div>
+                        </li>
+                    </ul>
+                    <nav class="nav-burger">
+                        <a class="nav-burger-icon" href="#"></a>
+                        <ul class="nav-list-small display-none">
+                            <li><a class="nav-list-item" href="#about-us-page">О нас</a></li>
+                            <li><a href="#services-page">Услуги</a></li>
+                            <li><a href="#our-work-page">Примеры работ</a></li>
+                            <li><a href="#article-page">Блог</a></li>
+                            <li><a href="#map-band">Контакты</a></li>
+                        </ul>
+                    </nav>
 
-<div class="about-us-page">
+                </nav>
+            </div>
+        </header>
+        <h2 class="title-2">Веб-студия</h2>
+        <h1 class="title-1">Ястреб</h1>
+    </div>
+</div>
+
+<div class="about-us-page" id="about-us-page">
     <div class="content">
         <h4 class="title-4">Чем мы занимаемся...</h4>
         <h3 class="title-3">О нас</h3>
@@ -113,7 +124,7 @@
     </div>
 </div>
 
-<div class="services-page">
+<div class="services-page" id="services-page">
     <div class="content">
         <h4 class="title-4">Мы работаем с...</h4>
         <h3 class="title-3">Услуги</h3>
@@ -477,14 +488,15 @@
 <div class="logos-band">
     <div class="content">
         <img src="images/logo-citroen.png">
-        <img src="images/logo-kb-stroy.png">
-        <img src="images/logo-jantarnyi.png">
-        <img src="images/logo-mozart.png">
         <img src="images/logo-olimp.png">
+        <img src="images/logo-jantarnyi.png">
+        <img src="images/logo-kb-stroy.png">
+        <img src="images/logo-mozart.png">
+
     </div>
 </div>
 
-<div class="our-work-page">
+<div class="our-work-page" id="our-work-page">
     <div class="content">
         <h4 class="title-4">Что мы делаем...</h4>
         <h3 class="title-3">Примеры наших работ</h3>
@@ -667,7 +679,7 @@
     </div>
 </div>
 
-<div class="article-page">
+<div class="article-page" id="article-page">
     <div class="content">
         <h4 class="title-4">Последнее из блога...</h4>
         <h3 class="title-3">Наши статьи</h3>
@@ -749,7 +761,7 @@
     </div>
 </div>
 
-<div class="map-band">
+<div class="map-band" id="map-band">
     <img src="images/map-icon.svg">
     <a class="map-band__title" href="https://clck.ru/LEVCJ" target="_blank">Открыть карту</a>
     <div class="separator"></div>
@@ -845,7 +857,7 @@
                     <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-8.png"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-img-9.png"></a>
                 </div>
-                <a class="footer-level-1-col-3__text">Смотреть больше фото</a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-level-1-col-3__text">Смотреть больше фото</a>
             </div>
 
         </div>
