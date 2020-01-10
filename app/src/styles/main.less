@@ -179,6 +179,7 @@ html {
     height: 36px;
     display: none;
     background: url("../../images/nav.svg") no-repeat;
+    cursor: pointer;
     @media (max-width: 575px) {
         display: block;
     }
@@ -705,6 +706,10 @@ html {
     }
 }
 
+.quote-list-item__content {
+    .flex-row(center, center);
+}
+
 .quote-list-item__by-line {
     .flex-row(flex-start, center);
     @media (max-width: 575px) {
@@ -713,11 +718,13 @@ html {
 }
 
 .quote-list-item__text {
-    .roboto(400, 1.6rem, #999999, 1em, none);
+    .roboto(400, 1.6rem, #999999, 0, none);
     font-style: italic;
+    .flex-col(flex-start, flex-start);
     @media (max-width: 575px) {
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        .flex-col(center, center);
     }
 }
 
@@ -725,9 +732,11 @@ html {
     .pattaya(400, 1.6rem, #333333, 0, none);
     font-style: italic;
     @media (max-width: 575px) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
+
+
 
 //СЛАЙДЕР НА ПОЛОСЕ С ЦИТАТАМИ
 .quote-list-arrow {
@@ -748,7 +757,6 @@ html {
     background: url("../../images/arrow-icon-right.svg") center no-repeat;
     right: 0;
 }
-
 
 //ВСТРЕЧАЙТЕ НАШУ КОМАНДУ
 .team-page {
@@ -1324,7 +1332,6 @@ html {
     @media (max-width: 575px) {
         width: 575px;
         min-width: 575px;
-        height: 1950px;
     }
 }
 

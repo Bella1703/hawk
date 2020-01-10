@@ -11,6 +11,7 @@ $(document).ready(function () {
 });
 
 //ВЫПАДАЮЩЕЕ МЕНЮ
+let navBurgerIcon = document.body.querySelector(".nav-burger-icon");
 let navBurger = document.body.querySelector(".nav-burger");
 let navListSmall = document.body.querySelector(".nav-list-small");
 
@@ -22,7 +23,12 @@ function Nav() {
     }
 }
 
-navBurger.addEventListener("click", Nav);
+
+
+navBurgerIcon.addEventListener("click", Nav);
+
+
+
 
 
 
@@ -138,8 +144,8 @@ $('.first-quote-list').slick({
     prevArrow: ".first-quote-list-arrow-left",
     nextArrow: ".first-quote-list-arrow-right",
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 7000,
+    // autoplay: true,
+    // autoplaySpeed: 7000,
     draggable: true,
     adaptiveHeight: true,
 });
@@ -153,8 +159,8 @@ $('.second-quote-list').slick({
     prevArrow: ".second-quote-list-arrow-left",
     nextArrow: ".second-quote-list-arrow-right",
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 7000,
+    // autoplay: true,
+    // autoplaySpeed: 7000,
     draggable: true,
     adaptiveHeight: true,
 });
