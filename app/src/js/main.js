@@ -144,8 +144,8 @@ $('.first-quote-list').slick({
     prevArrow: ".first-quote-list-arrow-left",
     nextArrow: ".first-quote-list-arrow-right",
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 7000,
+    autoplay: true,
+    autoplaySpeed: 7000,
     draggable: true,
     adaptiveHeight: true,
 });
@@ -159,8 +159,8 @@ $('.second-quote-list').slick({
     prevArrow: ".second-quote-list-arrow-left",
     nextArrow: ".second-quote-list-arrow-right",
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 7000,
+    autoplay: true,
+    autoplaySpeed: 7000,
     draggable: true,
     adaptiveHeight: true,
 });
