@@ -185,7 +185,7 @@ function hideModalWindow() {
     document.body.style.overflow = "";
 }
 
-
+//ВАЛИДАЦИЯ
 submit.addEventListener("click", function(){
     let isError = false;
     let email = document.body.querySelector("#mail");
