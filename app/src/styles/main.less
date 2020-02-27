@@ -21,9 +21,7 @@ html {
     }
 }
 
-.display-none {
-    display: none;
-}
+
 
 
 .content {
@@ -172,7 +170,10 @@ html {
     display: block;
 }
 .nav-burger {
-    .flex-col(flex-start, flex-end);
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    z-index: 3;
 }
 .nav-burger-icon {
     width: 50px;
@@ -183,23 +184,29 @@ html {
     @media (max-width: 575px) {
         display: block;
     }
-    &:hover {
-        background: url("../../images/nav-hover.svg");
-    }
 }
 .nav-list-small {
-    width: 197px;
-    height: 390px;
+    .flex-col(space-between, flex-end);
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+    padding-top: 92px;
+    padding-bottom: 28px;
+
     text-align: end;
     z-index: 2;
     background-image: linear-gradient(to bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
     & a {
-        .montserrat(400, 0.93rem, #ffffff, 0, uppercase);
-        padding: 30px 10px;
+        .montserrat(700, 1.2rem, #ffffff, 0, uppercase);
+        padding: 30px 20px;
         display: inline-block;
+        width: 100%;
     }
     & a:hover {
-        color: #fce38a;
+        color: #333333;
     }
 }
 
@@ -1121,7 +1128,7 @@ html {
     @media (max-width: 575px) {
         width: 575px;
         min-width: 575px;
-        height: 1330px;
+        height: 1340px;
     }
 }
 
@@ -1674,3 +1681,9 @@ html {
     }
 }
 
+
+
+
+.display-none {
+    display: none;
+}

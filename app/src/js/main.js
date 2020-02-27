@@ -2,7 +2,7 @@ import Scrollbar from "smooth-scrollbar/dist/smooth-scrollbar";
 
 //ПЛАВНЫЕ ЯКОРНЫЕ ССЫЛКИ
 $(document).ready(function () {
-    $("nav").on("click", "a", function (event) {
+    $(".main-page").on("click", "a", function (event) {
         event.preventDefault();
         let id = $(this).attr('href'),
             top = $(id).offset().top;
@@ -11,22 +11,23 @@ $(document).ready(function () {
 });
 
 //ВЫПАДАЮЩЕЕ МЕНЮ
-let navBurgerIcon = document.body.querySelector(".nav-burger-icon");
 let navBurger = document.body.querySelector(".nav-burger");
 let navListSmall = document.body.querySelector(".nav-list-small");
 
 function Nav() {
     if (navListSmall.classList.contains("display-none")) {
         navListSmall.classList.remove("display-none");
+        document.body.style.overflow = "hidden";
     } else {
         navListSmall.classList.add("display-none");
+        document.body.style.overflow = "visible";
     }
 }
 
 
 
-navBurgerIcon.addEventListener("click", Nav);
-
+navBurger.addEventListener("click", Nav);
+navListSmall.addEventListener("click", Nav);
 
 
 
