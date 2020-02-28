@@ -18,9 +18,16 @@ function Nav() {
     if (navListSmall.classList.contains("display-none")) {
         navListSmall.classList.remove("display-none");
         document.body.style.overflow = "hidden";
+        document.body.style.position= "fixed"; //для отмены скроны на iPhone
+        document.body.style.top= "0"; //для отмены скроны на iPhone
+        document.body.style.right= "0"; //для отмены скроны на iPhone
+
     } else {
         navListSmall.classList.add("display-none");
         document.body.style.overflow = "visible";
+        document.body.style.position= "static"; //для отмены скроны на iPhone
+        document.body.style.top= ""; //для отмены скроны на iPhone
+        document.body.style.right= ""; //для отмены скроны на iPhone
     }
 }
 
@@ -204,3 +211,5 @@ submit.addEventListener("click", function(){
         email.value = "";
     }
 });
+
+
